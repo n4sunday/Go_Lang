@@ -4,14 +4,18 @@ import (
 	"fmt"
 )
 
+//Scope
+
+//Global Varaible
+var gVaraible int = 500
+
 func main() {
-	//Boolean
-	isEmpty := true
-	isJumping := false
-	fmt.Println(isEmpty)
-	fmt.Println(isJumping)
-	someBoolean := 5 < 3
-	fmt.Println("5 < 3 :", someBoolean)
-	someBoolean2 := 5 == 3
-	fmt.Println("5 = 3 :", someBoolean2)
+	lVaraible := 40
+	fmt.Println("Global", gVaraible)
+	fmt.Println("Local", lVaraible)
+	anotherFunction()
+}
+func anotherFunction() {
+	fmt.Println("Global", gVaraible)
+	//fmt.Println("Local", lVaraible)
 }
