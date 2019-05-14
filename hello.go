@@ -4,19 +4,19 @@ import (
 	"fmt"
 )
 
-//Switch
+//Loop
 func main() {
-	fmt.Println("Enter : ")
-	var number int
-	fmt.Scanf("%d", &number)
-	switch number {
-	case 0:
-		fmt.Println("Zero")
-	case 1:
-		fmt.Println("One")
-	case 2:
-		fmt.Println("Two")
-	default:
-		fmt.Println("Unknow")
+	for i := 1; i <= 10; i++ {
+		fmt.Println("Sunday #",i)
+	}
+
+	j:=1
+	for j<=20 {
+		if(j%2==0){
+			fmt.Println("Even",j)
+		}else {
+			fmt.Println("Odd",j)
+		}
+		j++
 	}
 }
