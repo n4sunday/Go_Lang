@@ -1,22 +1,28 @@
 package main
 
-import (
-	"fmt"
-)
+import ("fmt")
 
-//Loop
+//Fucntion
 func main() {
-	for i := 1; i <= 10; i++ {
-		fmt.Println("Sunday #",i)
-	}
+	dosome()
+	dosomething("Sunday")
+	addition(8,2)
+	result:=additio2(15,15)
+	fmt.Println("result",result*10)
+}
 
-	j:=1
-	for j<=20 {
-		if(j%2==0){
-			fmt.Println("Even",j)
-		}else {
-			fmt.Println("Odd",j)
-		}
-		j++
-	}
+func dosome(){
+	fmt.Println("Hello Word")
+}
+
+func dosomething(str string){
+	fmt.Println("Func : ",str)
+}
+func addition(a int ,b int){
+	fmt.Println(a+b)
+}
+//Return 
+func additio2(a int ,b int) int{
+	output:=a+b
+	return output
 }
