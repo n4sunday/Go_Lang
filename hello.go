@@ -2,27 +2,26 @@ package main
 
 import ("fmt")
 
-//Fucntion
+//Variadic Fucntion
 func main() {
-	dosome()
-	dosomething("Sunday")
-	addition(8,2)
-	result:=additio2(15,15)
-	fmt.Println("result",result*10)
+	summation(1,2)
+	summation2(1,2,3)
+	sumVariadic(1,2,3,4,5,6,7,8,9,10)
 }
 
-func dosome(){
-	fmt.Println("Hello Word")
-}
-
-func dosomething(str string){
-	fmt.Println("Func : ",str)
-}
-func addition(a int ,b int){
+//Basic
+func summation(a int,b int){
 	fmt.Println(a+b)
 }
-//Return 
-func additio2(a int ,b int) int{
-	output:=a+b
-	return output
+func summation2(a int,b int,c int){
+	fmt.Println(a+b+c)
+}
+
+//Variadic 
+func sumVariadic(nums...int){
+	var total int
+	for _ , n:=range nums{
+		total+=n
+	}
+	fmt.Println(total)
 }
