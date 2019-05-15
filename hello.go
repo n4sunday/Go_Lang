@@ -2,19 +2,20 @@ package main
 
 import ("fmt")
 
-//Closure (Function No Name)
+//Pointer
 func main() {
-	add:=func (x,y int) int{
-		return x+y
-	}
-	fmt.Println(add(5,10))
-	x:=0
-	increment:=func() int{
-		x++
-		return x
-	}
-	fmt.Println(increment())
-	fmt.Println(increment())
+	x:=10
+	fmt.Println("x value is ",x)
+	fmt.Printf("x value is %d \n",x)
+	fmt.Printf("Address x variable %x\n",&x)
+
+	var p *int
+	p=&x //Pointer at x
+	fmt.Printf("Pointer P %x \n",p)
+	*p = 20
+	fmt.Println("p value is ",p)
+	fmt.Println("x value is ",x)
+
 
 
 }
