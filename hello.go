@@ -2,22 +2,19 @@ package main
 
 import ("fmt")
 
-//Map
+//Closure (Function No Name)
 func main() {
-	/*x:=make(map[string] string)
-	x["TH"]="Thailand"
-	x["JP"]="Japan"
-	x["EN"]="England"
-	x["H"]="Hydrogen"
-	x["Li"]="Lithium"*/
-	x:=map[string] string{
-		"TH":"Thailand",
-		"JP":"Japan",
+	add:=func (x,y int) int{
+		return x+y
 	}
-
-	//fmt.Println(x["EN"])
-	//fmt.Println(x["Li"])
-	fmt.Println(x)
+	fmt.Println(add(5,10))
+	x:=0
+	increment:=func() int{
+		x++
+		return x
+	}
+	fmt.Println(increment())
+	fmt.Println(increment())
 
 
 }
