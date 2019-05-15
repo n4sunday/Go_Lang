@@ -2,20 +2,26 @@ package main
 
 import ("fmt")
 
-//Pointer
+//Structure
+
+type Books struct{
+	title string
+	author string
+	subtitle string
+	price float64	
+}
 func main() {
-	x:=10
-	fmt.Println("x value is ",x)
-	fmt.Printf("x value is %d \n",x)
-	fmt.Printf("Address x variable %x\n",&x)
+	/*var Book1 Books
+	Book1.title="Go Programming"
+	Book1.author="Nattapon"
+	Book1.subtitle="N4S"
+	Book1.price=199
+	fmt.Println(Book1)
+	fmt.Println(Book1.title)*/
 
-	var p *int
-	p=&x //Pointer at x
-	fmt.Printf("Pointer P %x \n",p)
-	*p = 20
-	fmt.Println("p value is ",p)
-	fmt.Println("x value is ",x)
-
+	Golang:=Books{title:"Go Programming",author:"Nattapon",price:199}
+	fmt.Println(Golang)
+	fmt.Println((Golang.price*20)/100)
 
 
 }
