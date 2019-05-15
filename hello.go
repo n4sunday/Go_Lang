@@ -2,25 +2,22 @@ package main
 
 import ("fmt")
 
-//Array
+//Slice
 func main() {
-	var x[5] int
-	x[0]=5
-	x[1]=10
-	x[2]=15
-	x[3]=20
-	x[4]=25
+	x:=make([]float64,5) //Slice 5 
 	fmt.Println(x)
-	fmt.Println(x[1])
 
-	y:=[5]float64 {5,4,6,2,1,}
-	fmt.Println(y)
+	slice1:=[]int{1,2,3,4,5,6,7,8}
+	slice2:=append(slice1,9,10)
+	fmt.Println(slice1)
+	fmt.Println(slice2)
 
-	var total float64
-	for _ , value:=range y {
-		total += value
-	}
-	fmt.Println("total",total)
-	fmt.Println("AVG total",total/float64(len(y)))
+	arr:=[5]float64{1,2,3,4,5}
+	y:=arr[0:4]
+	fmt.Println(y) 
 
+	slice3:=[]int{10,20,30}
+	slice4:=make([]int,2)
+	copy(slice4,slice3)
+	fmt.Println(slice4)
 }
