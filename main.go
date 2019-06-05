@@ -3,11 +3,13 @@ import (
 	"fmt"
 )
 
-func Total(x, y string) (string,string) {
-	return y,x
+func spit(num int)(x int, y int){
+	x = num * 5 / 2
+	y = num - 10
+	return 
 }
 
-func main(){
-	a,b := Total("world","Hello")
-	fmt.Println(a,b)
+func main() {
+	fmt.Println(spit(20))
 }
+
