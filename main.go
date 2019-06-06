@@ -1,13 +1,16 @@
 package main
-import (
-	"fmt"
-)
+
+import ("fmt")
+
 func main(){
-	fmt.Println("counting")
+	i, j := 5, 10
 
-	for i:=0; i<10; i++ {
-		defer fmt.Println(i)
-	}
+	p := &i				 //point to i
+	fmt.Println(*p) //5  //read i through the poiner
+	*p = 4				 //set i through the pointer
+	fmt.Println(i)	//4	 //see the new value of i
 
-	fmt.Println("done")
+	p = &j				 //point to j
+	*p = *p/5 			 //divide j through the pointer
+	fmt.Println(j)  //2	 //see the new value of j
 }
