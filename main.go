@@ -1,11 +1,13 @@
 package main
-
 import (
 	"fmt"
 )
+func main(){
+	fmt.Println("counting")
 
-func main() {
-	defer fmt.Println("Nattapon")
+	for i:=0; i<10; i++ {
+		defer fmt.Println(i)
+	}
 
-	fmt.Println("Hello")
+	fmt.Println("done")
 }
